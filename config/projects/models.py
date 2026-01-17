@@ -1,5 +1,5 @@
 from django.db import models
-from workspaces.models import Workspace
+from config.workspaces.models import Workspace
 
 
 class Project(models.Model):

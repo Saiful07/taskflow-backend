@@ -1,5 +1,5 @@
 from rest_framework.permissions import BasePermission
-from workspaces.models import WorkspaceMember
+from config.workspaces.models import WorkspaceMember
 
 
 class IsWorkspaceMember(BasePermission):

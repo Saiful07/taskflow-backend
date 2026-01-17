@@ -1,7 +1,7 @@
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated
 
-from projects.models import Project
+from config.projects.models import Project
 from .models import Task
 from .serializers import (
     TaskCreateSerializer,

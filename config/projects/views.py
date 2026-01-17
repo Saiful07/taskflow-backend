@@ -1,6 +1,6 @@
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated
-from workspaces.models import Workspace
+from config.workspaces.models import Workspace
 from .models import Project
 from .serializers import ProjectCreateSerializer, ProjectListSerializer
 from .permissions import IsWorkspaceMember
