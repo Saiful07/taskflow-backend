@@ -27,11 +27,12 @@ INSTALLED_APPS = [
 
     'rest_framework',
 
-    'config.accounts',
-    'config.workspaces',
-    'config.projects',
-    'config.tasks',
+    'config.accounts.apps.AccountsConfig',
+    'config.workspaces.apps.WorkspacesConfig',
+    'config.projects.apps.ProjectsConfig',
+    'config.tasks.apps.TasksConfig',
 ]
+
 
 
 # MIDDLEWARE
