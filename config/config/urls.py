@@ -11,17 +11,18 @@ urlpatterns = [
     path('api/auth/login/', TokenObtainPairView.as_view()),
     path('api/auth/refresh/', TokenRefreshView.as_view()),
 
-    path('api/workspaces/', include('workspaces.urls')),
-
-    # ✅ CORRECT nested include (THIS FIXES YOUR ERROR)
     path(
-        'api/workspaces/<int:workspace_id>/projects/',
-        include('projects.urls')
+        'api/workspaces/',
+        include('config.workspaces.urls')
     ),
 
-    # ✅ Tasks (also correct)
+    path(
+        'api/workspaces/<int:workspace_id>/projects/',
+        include('config.projects.urls')
+    ),
+
     path(
         'api/projects/<int:project_id>/tasks/',
-        include('tasks.urls')
+        include('config.tasks.urls')
     ),
 ]
